@@ -9,23 +9,37 @@ describe('Park', function() {
     tina = new Dinosaur('t-rex', 'carnivore', 40);
     steve = new Dinosaur('rachiosaurus', 'herbivore', 35);
     terry = new Dinosaur('avimimus', 'omnivore', 25);
+
+    park = new Park(`Franco's Dinos`, 40);
   })
 
   it('should have a name', function () {
+    assert.strictEqual(park.name, `Franco's Dinos`);
   });
 
-  it('should have a ticket price');
+  it('should have a ticket price', function () {
+    assert.strictEqual(park.ticketPrice, 40);
+  });
 
-  it('should have a collection of dinosaurs');
+  it('should have a collection of dinosaurs', function () {
+    assert.deepStrictEqual(park.dinosaurs, []);
 
-  it('should be able to add a dinosaur to its collection');
+  });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to count its dinosaurs', function () {
+    assert.strictEqual(park.dinoCount(), 0)
+  });
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  xit('should be able to add a dinosaur to its collection', function () {
 
-  it('should be able to find all dinosaurs of a particular species');
+  });
 
-  it('should be able to remove all dinosaurs of a particular species');
+  xit('should be able to remove a dinosaur from its collection');
+
+  xit('should be able to find the dinosaur that attracts the most visitors');
+
+  xit('should be able to find all dinosaurs of a particular species');
+
+  xit('should be able to remove all dinosaurs of a particular species');
 
 });
