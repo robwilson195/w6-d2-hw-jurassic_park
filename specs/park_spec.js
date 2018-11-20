@@ -5,10 +5,14 @@ const Dinosaur = require('../models/dinosaur.js');
 describe('Park', function() {
 
   beforeEach(function () {
-
+    samantha = new Dinosaur('t-rex', 'carnivore', 50);
+    tina = new Dinosaur('t-rex', 'carnivore', 40);
+    steve = new Dinosaur('rachiosaurus', 'herbivore', 35);
+    terry = new Dinosaur('avimimus', 'omnivore', 25);
   })
 
-  it('should have a name');
+  it('should have a name', function () {
+  });
 
   it('should have a ticket price');
 
