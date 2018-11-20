@@ -27,14 +27,20 @@ describe('Park', function() {
   });
 
   it('should be able to count its dinosaurs', function () {
-    assert.strictEqual(park.dinoCount(), 0)
+    assert.strictEqual(park.dinoCount(), 0);
   });
 
-  xit('should be able to add a dinosaur to its collection', function () {
-
+  it('should be able to add a dinosaur to its collection', function () {
+    park.addDino(samantha);
+    assert.strictEqual(park.dinoCount(), 1);
   });
 
-  xit('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.removeDino(samantha);
+    assert.strictEqual(park.dinoCount(), 1);
+  });
 
   xit('should be able to find the dinosaur that attracts the most visitors');
 
