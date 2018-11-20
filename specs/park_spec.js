@@ -64,6 +64,29 @@ let park;
     assert.deepStrictEqual(park.dinosOfSpecies('t-rex'), [samantha, tina]);
   });
 
-  xit('should be able to remove all dinosaurs of a particular species');
+  it('should be able to remove all dinosaurs of a particular species', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.addDino(steve);
+    park.addDino(terry);
+    park.removeSpecies('t-rex');
+    assert.strictEqual(park.dinoCount(), 2);
+  });
+
+  it('should be able to determine the average visits per day', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.addDino(steve);
+    park.addDino(terry);
+    assert.strictEqual(park.dailyVisitors(), 150);
+  });
+
+  it('should be able to determine the average visits per year', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.addDino(steve);
+    park.addDino(terry);
+    assert.strictEqual(park.yearlyVisitors(), 54750)
+  });
 
 });

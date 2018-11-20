@@ -47,4 +47,24 @@ Park.prototype.dinosOfSpecies = function (type) {
   return dinos;
 };
 
+Park.prototype.removeSpecies = function (type) {
+  let oldDinos = this.dinosOfSpecies(type);
+  for (let dino of oldDinos) {
+    this.removeDino(dino);
+  }
+};
+
+Park.prototype.dailyVisitors = function () {
+  let visitors = 0;
+  for (let dino of this.dinosaurs) {
+    visitors += dino.guestsAttractedPerDay;
+  }
+  return visitors
+};
+
+Park.prototype.yearlyVisitors = function () {
+  return 365 * this.dailyVisitors();
+};
+
+
 module.exports = Park;
