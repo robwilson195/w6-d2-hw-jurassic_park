@@ -89,4 +89,12 @@ let park;
     assert.strictEqual(park.yearlyVisitors(), 54750)
   });
 
+  it('should be able to determine the average revenue per year', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.addDino(steve);
+    park.addDino(terry);
+    assert.strictEqual(park.yearlyRevenue(), 2190000);
+  });
+
 });
