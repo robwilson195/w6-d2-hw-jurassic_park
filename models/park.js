@@ -71,3 +71,23 @@ Park.prototype.yearlyRevenue = function () {
 };
 
 module.exports = Park;
+
+Park.prototype.dietPortfolio = function () {
+  let carns = 0;
+  let herbs = 0;
+  let omnis = 0;
+  for (let dino of this.dinosaurs) {
+    if (dino.diet === 'carnivore') {
+      carns += 1;
+    } else if (dino.diet === 'herbivore') {
+      herbs += 1;
+    } else if (dino.diet === 'omnivore') {
+      omnis += 1;
+    }
+  }
+  return {
+    carnivore: carns,
+    herbivore: herbs,
+    omnivore: omnis
+  }
+};

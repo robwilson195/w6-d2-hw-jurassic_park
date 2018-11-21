@@ -97,4 +97,17 @@ let park;
     assert.strictEqual(park.yearlyRevenue(), 2190000);
   });
 
+  it('should create an object describing the diet breakdown of the dinosaurs', function () {
+    park.addDino(samantha);
+    park.addDino(tina);
+    park.addDino(steve);
+    park.addDino(terry);
+    const expected = {
+      carnivore: 2,
+      herbivore: 1,
+      omnivore: 1
+    };
+    assert.deepStrictEqual(park.dietPortfolio(), expected)
+  });
+
 });
