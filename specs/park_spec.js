@@ -107,7 +107,7 @@ let park;
       herbivore: 1,
       omnivore: 1
     };
-    assert.deepStrictEqual(park.dietPortfolio(), expected)
+    assert.deepStrictEqual(park.dietPortfolio(), expected);
   });
 
 });
